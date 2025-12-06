@@ -8,9 +8,9 @@ const _inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Alex Morgan - Full Stack Developer & Designer",
+  title: "Billy S. Terante - AI Enthusiast & Full Stack Developer",
   description:
-    "Professional portfolio showcasing modern web development projects, skills, and services. Specializing in React, Next.js, and accessible design.",
+    "Professional portfolio of Billy S. Terante, 4th-year BSIT student specializing in Computer Vision, NLP, and Intelligent Edge Systems. Showcasing AI projects, web development, and IoT solutions.",
   generator: "v0.app",
   icons: {
     icon: [
@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
+      <body className={`font-sans antialiased ${_inter.className}`}>
         {children}
         <Analytics />
       </body>
