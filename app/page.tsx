@@ -143,9 +143,8 @@ export default function Portfolio() {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`text-sm font-medium transition-colors hover:text-accent relative ${
-                    activeSection === item.toLowerCase() ? "text-accent" : "text-foreground/70"
-                  }`}
+                  className={`text-sm font-medium transition-colors hover:text-accent relative ${activeSection === item.toLowerCase() ? "text-accent" : "text-foreground/70"
+                    }`}
                 >
                   {item}
                   {activeSection === item.toLowerCase() && (
@@ -422,7 +421,7 @@ export default function Portfolio() {
 
           <div className="mt-12 flex justify-center gap-6">
             <a
-              href="https://github.com"
+              href="https://github.com/Caeilanlightwood77"
               target="_blank"
               rel="noopener noreferrer"
               className="p-4 bg-card hover:bg-accent/10 border border-border hover:border-accent/50 rounded-lg transition-all hover:shadow-md"
@@ -431,7 +430,7 @@ export default function Portfolio() {
               <Github className="w-6 h-6 text-foreground" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/billy-terante-160662326"
               target="_blank"
               rel="noopener noreferrer"
               className="p-4 bg-card hover:bg-accent/10 border border-border hover:border-accent/50 rounded-lg transition-all hover:shadow-md"
