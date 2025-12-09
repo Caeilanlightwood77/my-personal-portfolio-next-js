@@ -26,7 +26,7 @@ export default function Portfolio() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
 
-      const sections = ["home", "about", "skills", "services", "portfolio", "contact"]
+      const sections = ["home", "about", "skills", "services", "achievements", "portfolio", "contact"]
       const current = sections.find((section) => {
         const element = document.getElementById(section)
         if (element) {
@@ -139,7 +139,7 @@ export default function Portfolio() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              {["Home", "About", "Skills", "Services", "Portfolio", "Contact"].map((item) => (
+              {["Home", "About", "Skills", "Services", "Achievements", "Portfolio", "Contact"].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -219,15 +219,24 @@ export default function Portfolio() {
                 </p>
               </div>
             </div>
-            <div className="relative">
-              <Card className="p-12 text-center border-2 shadow-lg">
-                <div className="mb-6">
-                  <p className="text-7xl font-bold text-accent mb-3">4th</p>
-                  <p className="text-2xl text-foreground font-semibold mb-2">Year</p>
-                  <p className="text-xl text-muted-foreground">BSIT Student</p>
+            <div className="relative mt-24">
+              <Card className="p-12 text-center border-2 shadow-lg relative">
+                <div className="absolute -top-24 left-1/2 transform -translate-x-1/2">
+                  <div className="w-48 h-48 rounded-full border-4 border-background shadow-2xl overflow-hidden ring-4 ring-accent/20">
+                    <img
+                      src="/Billy_Terante_2x2.png"
+                      alt="Billy Terante"
+                      className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
                 </div>
+                <div className="mb-6 mt-20">
+                  <p className="text-5xl font-bold text-accent mb-3">4th Year</p>
+                  <p className="text-xl text-foreground font-semibold mb-2">BSIT Student</p>
+                </div>
+
                 <div className="pt-6 border-t border-border">
-                  <p className="text-sm text-muted-foreground mb-2">Caraga State University</p>
+                  <p className="text-sm text-muted-foreground mb-1">Caraga State University</p>
                   <p className="text-sm font-medium">Computing & Information Sciences</p>
                 </div>
               </Card>
@@ -329,6 +338,111 @@ export default function Portfolio() {
                 <p className="text-muted-foreground leading-relaxed">{service.description}</p>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Achievements Section */}
+      <section id="achievements" className="py-32 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl font-bold mb-4 text-balance">Achievements & Recognition</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Milestones in innovation and research excellence
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            {/* Achievement 1: DICT Startup Challenge */}
+            <Card className="overflow-hidden border-2 hover:border-accent/50 transition-all group">
+              <div className="grid lg:grid-cols-2 gap-0">
+                <div className="relative h-64 lg:h-auto overflow-hidden">
+                  <img
+                    src="VisionDrive_Team2.jpg"
+                    alt="VisionDrive Team at DICT Startup Challenge"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-background/20 to-background/5 lg:bg-gradient-to-r lg:from-transparent lg:to-background/10" />
+                </div>
+                <div className="p-10 flex flex-col justify-center">
+                  <div className="mb-6">
+                    <span className="inline-block px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-semibold border border-accent/20 mb-3">
+                      <time dateTime="2025-11-13">November 13, 2025</time>
+                    </span>
+                    <h3 className="text-2xl font-bold mb-2">Regional Pitching Competition</h3>
+                    
+                    {/* CITATION BLOCK */}
+                    <div className="text-muted-foreground text-sm mb-4">
+                      Authority: <cite className="not-italic font-medium text-foreground">DICT Caraga & Philippine Startup Challenge</cite>
+                    </div>
+
+                    <p className="text-foreground/80 mb-8 leading-relaxed">
+                      Competed against 34 startups across the region. Our team, <strong>VisionDrive</strong>, secured a top spot with our AI-powered vehicle safety system.
+                    </p>
+
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <div className="p-4 bg-background border border-border rounded-lg shadow-sm flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-500 font-bold">
+                          🏆
+                        </div>
+                        <div>
+                          <p className="font-bold text-foreground">3rd Runner-Up</p>
+                          <p className="text-xs text-muted-foreground">Regional Winner</p>
+                        </div>
+                      </div>
+                      <div className="p-4 bg-background border border-border rounded-lg shadow-sm flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500 font-bold">
+                          🎥
+                        </div>
+                        <div>
+                          <p className="font-bold text-foreground">Best Video Pitch</p>
+                          <p className="text-xs text-muted-foreground">Special Award</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* Achievement 2: Seed Grant */}
+            <Card className="overflow-hidden border-2 hover:border-accent/50 transition-all group">
+              <div className="grid lg:grid-cols-2 gap-0 lg:grid-flow-dense">
+                <div className="relative h-64 lg:h-auto lg:col-start-2 overflow-hidden">
+                   <img
+                    src="Navigatu_Grant.jpg"
+                    alt="Billy Terante Presenting VisionDrive"
+                    className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-10 flex flex-col justify-center lg:col-start-1">
+                  <div className="mb-6">
+                    <span className="inline-block px-3 py-1 bg-green-500/10 text-green-600 rounded-full text-xs font-semibold border border-green-500/20 mb-3">
+                      <time dateTime="2025-12-03">December 3, 2025</time>
+                    </span>
+                    <h3 className="text-2xl font-bold mb-2">Innovation Seed Grant Recipient</h3>
+                    
+                    {/* CITATION BLOCK */}
+                    <div className="text-muted-foreground text-sm mb-4">
+                      Authority: <cite className="not-italic font-medium text-foreground">CSU Office of the VP for R.D.I.E.</cite>
+                    </div>
+                    
+                    <p className="text-foreground/80 mb-8 leading-relaxed">
+                      Awarded funding during the TBI Year-End Assessment to scale the VisionDrive venture. This grant supports our transition from prototype to market-ready solution.
+                    </p>
+
+                   <div className="flex flex-wrap gap-3">
+                    <span className="px-3 py-1 bg-secondary text-secondary-foreground rounded text-sm font-medium">
+                      Research & Development
+                    </span>
+                    <span className="px-3 py-1 bg-secondary text-secondary-foreground rounded text-sm font-medium">
+                      Technopreneurship
+                    </span>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
