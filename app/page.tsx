@@ -26,7 +26,7 @@ export default function Portfolio() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
 
-      const sections = ["home", "about", "skills", "services", "achievements", "portfolio", "contact"]
+      const sections = ["home", "about", "skills", "services", "achievements", "projects", "contact"]
       const current = sections.find((section) => {
         const element = document.getElementById(section)
         if (element) {
@@ -139,7 +139,7 @@ export default function Portfolio() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              {["Home", "About", "Skills", "Services", "Achievements", "Portfolio", "Contact"].map((item) => (
+              {["Home", "About", "Skills", "Services", "Achievements", "Projects", "Contact"].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -177,7 +177,7 @@ export default function Portfolio() {
               Edge Systems.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Button onClick={() => scrollToSection("portfolio")} size="lg" className="gap-2 shadow-lg">
+              <Button onClick={() => scrollToSection("projects")} size="lg" className="gap-2 shadow-lg">
                 View My Projects
                 <ExternalLink className="w-4 h-4" />
               </Button>
@@ -447,8 +447,8 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-32 px-4 sm:px-6 lg:px-8">
+      {/* Projects Section */}
+      <section id="projects" className="py-32 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <h2 className="text-4xl font-bold mb-4 text-balance">Featured Projects</h2>
